@@ -14,7 +14,8 @@ class Main {
   public static void main(String[] args) {
     try {
       Service s = new Service();
-      System.out.print("Co chcesz zrobić:\n 1 - dodanie studenta \n 2 - wyswietlanie studenta \n");
+      System.out
+          .print("Co chcesz zrobić:\n 1 - dodanie studenta \n 2 - wyswietlanie studenta \n 0 - Koniec programu \n");
       Scanner scanner = new Scanner(System.in);
       while (true) {
         int wybor = scanner.nextInt();
