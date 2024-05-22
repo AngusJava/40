@@ -29,13 +29,16 @@ class Main {
             Scanner imie = new Scanner(System.in);
             Scanner wiek = new Scanner(System.in);
             Scanner nazwisko = new Scanner(System.in);
+            Scanner data_dnia = new Scanner(System.in);
             System.out.print("Podaj imie: ");
             String name = imie.nextLine();
             System.out.print("Podaj nazwisko: ");
             String lname = nazwisko.nextLine();
             System.out.print("Podaj wiek studenta: ");
             int age = wiek.nextInt();
-            s.addStudent(new Student(name, lname, age));
+            System.out.print("Podaj Datę dnia:  ");
+            String date = data_dnia.nextLine();
+            s.addStudent(new Student(name, lname, age, date));
             break;
           case 2:
             var students = s.getStudents();
