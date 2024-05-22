@@ -15,7 +15,8 @@ class Main {
     try {
       Service s = new Service();
       System.out
-          .print("Co chcesz zrobić:\n 1 - dodanie studenta \n 2 - wyswietlanie studenta \n 0 - Koniec programu \n");
+          .print(
+              "Co chcesz zrobić:\n 1 - dodanie danych \n 2 - wyswietlanie studenta \n 3 - wyszukaj studenta \n 0 - Koniec programu \n");
       Scanner scanner = new Scanner(System.in);
       while (true) {
         int wybor = scanner.nextInt();
@@ -66,6 +67,17 @@ class Main {
             for (Student current : students) {
               System.out.println(current.ToString());
             }
+          case 3:
+            Scanner inputLastName = new Scanner(System.in);
+            System.out.print("Wprowadź nazwisko do wyszukania: ");
+            String searchLastName = inputLastName.nextLine();
+            Student searchedStudent = s.findStudentByName(searchLastName);
+            if (searchedStudent != null) {
+              System.out.println("Znaleziono studenta: " + searchedStudent.ToString());
+            } else {
+              System.out.println("Nie znaleziono studenta o podanym nazwisku.");
+            }
+            break;
         }
       }
     } catch (IOException e) {

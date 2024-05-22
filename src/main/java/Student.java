@@ -26,6 +26,10 @@ public class Student {
     return Age;
   }
 
+  public String GetLname() {
+    return Lname;
+  }
+
   public String ToString() {
     return Name + " " + Lname + " " + Integer.toString(Age) + " " + Date + " " + Date_day + "-" + Date_mouth + "-"
         + Date_year;

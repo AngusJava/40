@@ -5,6 +5,8 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Service {
 
@@ -23,7 +25,7 @@ public class Service {
     String line = "";
     while (true) {
       line = reader.readLine();
-      if(line == null)
+      if (line == null)
         break;
       ret.add(Student.Parse(line));
     }
@@ -31,7 +33,14 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) {
+  public Student findStudentByName(String lastName) throws IOException {
+    var lines = Files.readAllLines(Paths.get("db.txt"));
+    for (String line : lines) {
+      Student student = Student.Parse(line);
+      if (student.GetLname().equals(lastName)) {
+        return student;
+      }
+    }
     return null;
   }
 }
