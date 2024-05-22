@@ -62,11 +62,13 @@ class Main {
             }
             s.addStudent(new Student(name, lname, age, date, date_day, date_mouth, date_year));
             break;
+
           case 2:
             var students = s.getStudents();
             for (Student current : students) {
               System.out.println(current.ToString());
             }
+            break;
           case 3:
             Scanner inputLastName = new Scanner(System.in);
             System.out.print("Wprowadź nazwisko do wyszukania: ");
