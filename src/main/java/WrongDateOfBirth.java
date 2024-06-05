@@ -7,7 +7,7 @@ class WrongDateOfBirthException extends Exception {
         super(message);
     }
 }
-// 6_4
+// 6_3
 public class WrongDateOfBirth {
     public static void main(String[] args, String dateOfBirthStr) {
         try {

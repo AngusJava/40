@@ -5,7 +5,7 @@ class WrongAge extends Exception {
         super(message);
     }
 }
-// 6_4
+// 6_3
 public class TestWrongAge {
     public static void main(String[] args, int age) {
         try {

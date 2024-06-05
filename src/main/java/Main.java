@@ -43,7 +43,7 @@ class Main {
             System.out.print("Podaj datę urodzenia studenta (dd-MM-yyyy): ");
             String date = dataUrodzeniaScanner.nextLine();
 
-           //6 _ 4 
+           //6 _ 3 
             WrongStudentName.main(args, lname);
             TestWrongAge.main(args, age);
             WrongDateOfBirth.main(args, date);

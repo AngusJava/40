@@ -5,7 +5,7 @@ class MessageWrongStudentName extends Exception {
         super(message);
     }
 }
- // 6_4
+ // 6_3
 public class WrongStudentName {
     public static void main(String[] args, String lname) {
         try {
