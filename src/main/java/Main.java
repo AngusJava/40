@@ -16,7 +16,7 @@ class Main {
       Service s = new Service();
       System.out
           .print(
-              "Co chcesz zrobić:\n 1 - dodanie danych \n 2 - wyswietlanie studenta \n 3 - wyszukaj studenta \n 4 - łapanie błedu \n 5 - przykladowy błąd \n 0 - Koniec programu \n ");
+              "Co chcesz zrobić:\n 1 - dodanie danych \n 2 - wyswietlanie studenta \n 3 - wyszukaj studenta \n 4 - łapanie błedu  \n 0 - Koniec programu \n ");
       Scanner scanner = new Scanner(System.in);
       while (true) {
         int wybor = scanner.nextInt();
@@ -77,25 +77,14 @@ class Main {
             }
             break;
           case 4:
-            // TestWrongAge.main(args);
-            // WrongStudentName.main(args);
-            // WrongDateOfBirth.main(args);
-          case 5:
-            try {
 
-              int wynik = 5 / 0; // Potencjalnie błędna operacja
+            // 6_4
+            // Ścieżka do pliku db.txt
+            String filePath = "db.txt";
 
-              System.out.println("Wynik: " + wynik);
-
-            } catch (ArithmeticException e) {
-
-              System.out.println("Wystąpił błąd arytmetyczny: " + e.getMessage());
-
-            } finally {
-
-              System.out.println("To jest blok finally.");
-
-            }
+            // Wywołanie metody checkDatabase z klasy DatabaseChecker
+            DatabaseChecker.checkDatabase(filePath);
+            break;
         }
       }
 
