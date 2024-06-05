@@ -29,37 +29,33 @@ class Main {
             // 4_1
             Scanner imie = new Scanner(System.in);
             Scanner wiek = new Scanner(System.in);
-            Scanner nazwisko = new Scanner(System.in);
-            Scanner data_dnia = new Scanner(System.in);
+            Scanner nazwiskoScanner = new Scanner(System.in);
+            Scanner dataUrodzeniaScanner = new Scanner(System.in);
             Scanner data_dzien = new Scanner(System.in);
             Scanner data_miesiac = new Scanner(System.in);
             Scanner data_rok = new Scanner(System.in);
             System.out.print("Podaj imie: ");
             String name = imie.nextLine();
-            System.out.print("Podaj nazwisko: ");
-            String lname = nazwisko.nextLine();
+            System.out.print("Podaj nazwisko studenta: ");
+            String lname = nazwiskoScanner.nextLine();
             System.out.print("Podaj wiek studenta: ");
             int age = wiek.nextInt();
-            System.out.print("Podaj Datę dnia:  ");
-            String date = data_dnia.nextLine();
+            System.out.print("Podaj datę urodzenia studenta (dd-MM-yyyy): ");
+            String date = dataUrodzeniaScanner.nextLine();
+
+           //6 _ 4 
+            WrongStudentName.main(args, lname);
+            TestWrongAge.main(args, age);
+            WrongDateOfBirth.main(args, date);
+
+            
             System.out.print("Podaj dzien:  ");
-            int date_day = data_dnia.nextInt();
+            int date_day = data_dzien.nextInt();
             System.out.print("Podaj miesiac  ");
-            int date_mouth = data_dnia.nextInt();
+            int date_mouth = data_miesiac.nextInt();
             System.out.print("Podaj rok ");
-            int date_year = data_dnia.nextInt();
-            if (date_day > 31) {
-              System.out.print("dzien spoza zakresu");
-              break;
-            }
-            if (date_mouth > 12) {
-              System.out.print("miesiac spoza zakresu");
-              break;
-            }
-            if (date_year < 1900 || date_year > 2025) {
-              System.out.print("rok nie w zakresie");
-              break;
-            }
+            int date_year = data_rok.nextInt();
+
             s.addStudent(new Student(name, lname, age, date, date_day, date_mouth, date_year));
             break;
 
@@ -81,9 +77,9 @@ class Main {
             }
             break;
           case 4:
-            TestWrongAge.main(args);
-            WrongStudentName.main(args);
-            WrongDateOfBirth.main(args);
+            // TestWrongAge.main(args);
+            // WrongStudentName.main(args);
+            // WrongDateOfBirth.main(args);
           case 5:
             try {
 

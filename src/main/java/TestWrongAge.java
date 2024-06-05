@@ -5,14 +5,10 @@ class WrongAge extends Exception {
         super(message);
     }
 }
-
+// 6_4
 public class TestWrongAge {
-    public static void main(String[] args) {
+    public static void main(String[] args, int age) {
         try {
-            Scanner wiek = new Scanner(System.in);
-            System.out.print("Podaj wiek studenta: ");
-            int age = wiek.nextInt();
-            // Potencjalnie błędna wartość wieku
             if (age < 0 || age > 100) {
                 throw new WrongAge("Wiek musi być w zakresie od 0 do 100 lat.");
             }

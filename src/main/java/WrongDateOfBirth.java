@@ -1,22 +1,16 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
 
 class WrongDateOfBirthException extends Exception {
     public WrongDateOfBirthException(String message) {
         super(message);
     }
 }
-
+// 6_4
 public class WrongDateOfBirth {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void main(String[] args, String dateOfBirthStr) {
         try {
-            System.out.print("Podaj datę urodzenia studenta: ");
-            String dateOfBirthStr = scanner.nextLine();
-
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
             Date dateOfBirth = dateFormat.parse(dateOfBirthStr);
 
